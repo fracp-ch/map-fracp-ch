@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Teikei Map</title>
+    <link rel="stylesheet" media="all" href="https://map-preview.ernte-teilen.org/main.css">
+
+    <style>
+        html, body, .root {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: Roboto, Arial, sans-serif;
+        }
+        .root {
+            display: flex;
+            flex-direction: column;
+        }
+        .map {
+            flex-grow: 1;
+        }
+
+    </style>
+  </head>
+  <body>
+    <noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
+    <div class="root">
+        <div class="map">
+            <div
+            id="teikei-app"
+            data-base-url="/#"
+            data-country="CH"
+            data-api-base-url="https://api-preview.ernte-teilen.org"
+            data-assets-base-url="https://map-preview.ernte-teilen.org/assets"
+            data-display-locale="fr-CH"
+            data-user-communication-locale="fr-CH"
+          ></div>
+        </div>
+        <script src="https://map-preview.ernte-teilen.org/main.js"></script>
+    </div>
+  </body>
+</html>

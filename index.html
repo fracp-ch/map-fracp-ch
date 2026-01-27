@@ -58,17 +58,31 @@
         margin-top: 7px;
       }
 
-      a.button {
-        font-size: 18px;
-        text-decoration: none;
+      .nav-contact-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #215334;
         padding: 6px 12px;
-        border-radius: 5px;
-        background-color: #317452;
+        border: 2px solid #215334;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+      }
+
+      .nav-contact-btn:hover {
+        background-color: #215334;
         color: white;
-        &:hover {
-          background-color: #215334;
-          border-color: #215334;
-        }
+      }
+
+      .nav-contact-btn svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        margin-top: 1px;
       }
 
 
@@ -106,11 +120,17 @@
   <body>
     <header>
       <nav>
-        <a class="logo" href="https://www.fracp.ch">
+        <a class="logo" href="https://fracp.ch">
           <img src="https://map.fracp.ch/assets/logo.png" alt="FRACP Logo" height="45"/>
         </a>
         <h1>Plateforme de mise en réseau</h1>
-        <a class="button" href="https://www.fracp.ch/contact">Contact</a>
+        <a href="mailto:info@fracp.ch" class="nav-contact-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          <span>info@fracp.ch</span>
+        </a>
       </nav>
     </header>
     <noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
@@ -118,7 +138,7 @@
       id="teikei-app"
       data-base-url="/#"
       data-country="CH-fr"
-      data-external-help-url="https://www.fracp.ch/carte"
+      data-external-help-url="https://fracp.ch/carte"
       data-api-base-url="https://api.ernte-teilen.org"
       data-assets-base-url="https://map.ernte-teilen.org/assets"
       data-display-locale="fr-CH"
